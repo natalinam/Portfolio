@@ -20,4 +20,21 @@ class PortContentsController < ApplicationController
     end
   end
 
+  def edit
+    @portfolio_items = PortContent.find(params[:id])
+  end
+
+  def update
+    @portfolio_items = PortContent.find(params[:id])
+
+    respond_to do |format|
+      if @portfolio_items.update(params.require(:port_content).permit(:title, :subtitle, :body))
+        format.html { redirect_to port_contents_path, notice: "Record was successfully updated." }
+        format.json { render :show, status: :ok, location: @portfolio_items }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
+
   end
