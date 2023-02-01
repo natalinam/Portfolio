@@ -1,0 +1,2 @@
+class PortContent < ApplicationRecord
+end
