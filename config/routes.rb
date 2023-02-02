@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :port_contents
-  resources :blogs
+
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
+
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
