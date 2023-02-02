@@ -1,4 +1,5 @@
 class PortContentsController < ApplicationController
+
   def index
     @portfolio_items = PortContent.all
   end
@@ -40,5 +41,9 @@ class PortContentsController < ApplicationController
   def show
     @portfolio_items = PortContent.find(params[:id])
   end
+
+  def destroy
+
+    end
 
   end
