@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :port_contents
+  get 'angular-items', to: 'port_contents#angular'
 
   resources :blogs do
     member do

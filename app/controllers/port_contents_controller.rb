@@ -4,6 +4,10 @@ class PortContentsController < ApplicationController
     @portfolio_items = PortContent.all
   end
 
+  def angular
+    @angular_portfolio_items = PortContent.angular
+  end
+
   def new
     @portfolio_items = PortContent.new
   end
