@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
-  resources :blogs
+  resources :port_contents
+
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
+
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+
+  root to: 'pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
