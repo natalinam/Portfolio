@@ -150,6 +150,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails-ujs (0.1.0)
+      railties (>= 3.1)
     railties (7.0.4.2)
       actionpack (= 7.0.4.2)
       activesupport (= 7.0.4.2)
@@ -201,10 +203,11 @@ DEPENDENCIES
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
-  jquery-rails
+  jquery-rails (~> 4.3, >= 4.3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
+  rails-ujs (~> 0.1.0)
   sprockets-rails
   stimulus-rails
   turbo-rails

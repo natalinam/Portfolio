@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register '}
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
+
   resources :port_contents
   get 'angular-items', to: 'port_contents#angular'
 

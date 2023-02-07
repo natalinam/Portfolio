@@ -48,7 +48,9 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem "jquery-rails"
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
+gem 'rails-ujs', '~> 0.1.0'
 
 gem 'friendly_id', '~> 5.4.0'
 
