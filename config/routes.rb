@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :port_contents
   get 'angular-items', to: 'port_contents#angular'
 
