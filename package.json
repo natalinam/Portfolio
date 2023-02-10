@@ -1,0 +1,12 @@
+{
+  "name": "Untitled",
+  "version": "1.0.0",
+  "dependencies": {
+    "@rails/activestorage": "^7.0.4-2",
+    "@rails/ujs": "^7.0.4-2",
+    "channels": "^0.0.4",
+    "lib": "^4.3.3",
+    "trix": "^2.0.4",
+    "turbolinks": "^5.2.0"
+  }
+}
