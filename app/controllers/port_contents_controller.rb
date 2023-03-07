@@ -14,7 +14,7 @@ class PortContentsController < ApplicationController
   end
 
   def create
-    @portfolio_items = PortContent.new(params.require(:port_content).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @portfolio_items = PortContent.new(port_content_params)
 
     respond_to do |format|
       if @portfolio_items.save
@@ -34,7 +34,7 @@ class PortContentsController < ApplicationController
     @portfolio_items = PortContent.find(params[:id])
 
     respond_to do |format|
-      if @portfolio_items.update(params.require(:port_content).permit(:title, :subtitle, :body))
+      if @portfolio_items.update(port_content_params)
         format.html { redirect_to port_contents_path, notice: "Record was successfully updated." }
         format.json { render :show, status: :ok, location: @portfolio_items }
       else
@@ -50,5 +50,12 @@ class PortContentsController < ApplicationController
   def destroy
 
     end
+  private
 
+  def port_content_params
+    params.require(:port_content).permit(:title,
+                                         :subtitle,
+                                         :body,
+                                         technologies_attributes: [:name])
+  end
   end
